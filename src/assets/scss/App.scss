@@ -1,0 +1,49 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./open-iconic-bootstrap.scss";
+@import "./Cards.scss";
+@import "./Carousel.scss";
+@import "./Header.scss";
+@import "./Player.scss";
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.navbar{
+    @include media-breakpoint-down(sm) { 
+        & .container{
+            flex-direction: column;
+            
+        }
+    }
+    .nav-link{
+        color : black;
+        font-weight: 600;
+        &:hover{
+            color : #1DB88D
+        }
+        &.active{
+            color : #1DB88D
+        }
+    }
+}
+
+.loader{
+    width: 100px;
+} 
+
+.track-details{
+    & img{
+        width: 100%;
+    }
+}

@@ -1,0 +1,54 @@
+.player-wrap{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    padding: 5px;
+    border-top: 3px solid #d8d8d8;
+    box-shadow: 0 0 4px 0px #cecece;
+    z-index: 99999;
+    & img{
+        max-width: 88px;
+        float: left;
+        margin-right: 10px;
+    }
+    @include media-breakpoint-between(sm, md) { 
+        & img{
+            display :none;
+        } 
+    }
+    @include media-breakpoint-only(xs) {
+        & .oi-x{
+            position: absolute;
+            top: 0;
+            right: 15px;
+        
+        }
+    }
+    @media (min-width: 577px) and (max-width: 767px) { 
+        & .btn.btn-light{
+            float: left;
+        }
+    }
+    
+    & .preview-details{
+        h6{
+            color: #1DB88D;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        h5,p{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+    & .rhap_container{
+        box-shadow : none;
+    }
+    & .oi-x{
+        cursor: pointer;
+        color : #c1c1c1;
+    }
+}
