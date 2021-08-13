@@ -1,0 +1,98 @@
+.carousel-wrapper{
+    & .carousel-header{
+        & h5{
+            float: left;
+            & a{
+                color: black;
+                text-decoration: none;
+            }
+        }
+        & .controls{
+            float: right;
+            & span{
+                cursor: pointer;
+            }
+        }
+    }
+    & .display-area{
+        overflow: hidden;
+        clear: both;
+        width: 100%;
+    }
+    & .slider-wrapper{
+        display: flex;
+        transition: ease 0.5s;
+        gap: 10px;
+        & .flexcard{
+            flex-basis: calc((100% - 40px) / 5);
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-bottom: 0;
+            height: 220px;
+            & img{
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+            }
+            & .play-overlay{
+                height: 70%;
+            }
+        }
+
+        & .artist-card.flexcard{
+            flex-basis: calc((100% - 60px) / 7);
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-bottom: 0;
+            height: 220px;
+            position: relative;
+            
+            & img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        @include media-breakpoint-down(sm) { 
+            & .flexcard{
+                flex-basis: calc((100% - 10px) / 2); 
+                
+            }
+            & .artist-card.flexcard{
+                flex-basis: calc((100% - 10px) / 2);
+                
+            }
+          
+        }
+        @include media-breakpoint-up(sm) { 
+            & .flexcard{
+                flex-basis: calc((100% - 20px) / 3); 
+                
+            }
+            & .artist-card.flexcard{
+                flex-basis: calc((100% - 30px) / 4);
+                
+            }
+        }
+        @include media-breakpoint-up(md) { 
+            & .flexcard{
+                flex-basis: calc((100% - 30px) / 4); 
+                
+            }
+            & .artist-card.flexcard{
+                flex-basis: calc((100% - 40px) / 6);
+                
+            }
+        }
+        @include media-breakpoint-up(lg) { 
+            & .flexcard{
+                flex-basis: calc((100% - 40px) / 5); 
+            }
+            & .artist-card.flexcard{
+                flex-basis: calc((100% - 60px) / 7);
+                
+            }
+            
+        }
+    }
+}
